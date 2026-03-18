@@ -1,6 +1,6 @@
 require("dotenv").config();
 const express = require("express");
-const fetch = require("node-fetch");
+const fetch = (...args) => import('node-fetch').then(({default: f}) => f(...args));
 const path = require("path");
 const os = require("os");
 
